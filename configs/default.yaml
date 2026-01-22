@@ -1,0 +1,60 @@
+seed: 1337
+
+charset: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+image:
+  height: 64
+  width: 256
+  keep_aspect: true
+
+split:
+  train: 0.70
+  test: 0.15
+  val: 0.15
+  group_column: ""
+  group_from_path_regex: ""
+
+augmentation:
+  enable: true
+  motion_blur_prob: 0.30
+  jpeg_artifact_prob: 0.30
+  low_light_prob: 0.30
+
+training:
+  batch_size: 32
+  epochs: 60
+  learning_rate: 0.001
+  learning_rate_mobilenet_v2: 0.0001
+  learning_rate_efficientnet_b0: 0.0001
+  label_max_length: 12
+  early_stop_patience: 8
+
+ctc:
+  max_time_steps: 16
+
+lightweight_cnn:
+  base_filters: 16
+  use_relu6: true
+
+mobilenet_v2:
+  alpha: 0.35
+  feature_layer: "block_2_add"
+  pretrained: true
+
+efficientnet:
+  variant: "B0"
+  feature_layer: "block2b_add"
+  pretrained: true
+
+quantization:
+  ptq: true
+  qat: true
+
+pruning:
+  target_prune_ratio: 0.30
+  min_filters_per_layer: 8
+
+distillation:
+  temperature: 2.0
+  alpha: 0.5
+  feature_layer_names: ["block_1_expand", "block_3_expand", "block_6_expand"]

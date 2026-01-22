@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+.vscode/
+.idea/
+
+# Local datasets and generated data
+archive/
+synthetic_plate_data/
+
+# ESP-IDF and build artifacts
+ESP/esp-idf/
+ESP/OCRProject/build/
+ESP/OCRProject/managed_components/
+
+# Logs and temporary files
+*.log
+*.tmp

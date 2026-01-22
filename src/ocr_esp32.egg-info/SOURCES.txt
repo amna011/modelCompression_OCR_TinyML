@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/ocr/__init__.py
+src/ocr/benchmark.py
+src/ocr/compress.py
+src/ocr/config.py
+src/ocr/ctc.py
+src/ocr/data.py
+src/ocr/distill.py
+src/ocr/evaluate.py
+src/ocr/models.py
+src/ocr/prune.py
+src/ocr/train.py
+src/ocr_esp32.egg-info/PKG-INFO
+src/ocr_esp32.egg-info/SOURCES.txt
+src/ocr_esp32.egg-info/dependency_links.txt
+src/ocr_esp32.egg-info/top_level.txt
